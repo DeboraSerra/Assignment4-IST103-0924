@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script src="./script/firebase.js"></script>
+    <script src="./script/home.js"></script>
+  </head>
+  <body>
+    <main class="container mx-auto my-12">
+      <form
+        action="#"
+        method="post"
+        class="flex flex-col md:max-w-lg mx-4 md:mx-auto border py-6 px-4 md:px-8 border-slate-400 rounded gap-8 shadow-xl"
+      >
+        <div>
+          <h1 class="text-center font-bold text-xl mb-2">Welcome!</h1>
+          <p class="text-center">Sign in to your CCTB account</p>
+        </div>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="E-mail"
+          class="border py-2 px-3 rounded focus:outline-none focus:border-slate-500"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="border py-2 px-3 rounded focus:outline-none focus:border-slate-500"
+        />
+        <div class="flex justify-between gap-4">
+          <button
+            id="sign-in"
+            class="bg-teal-600 text-white rounded py-2 px-4 hover:bg-teal-700 shadow-lg active:shadow-none flex-1"
+          >
+            Sign In
+          </button>
+          <button
+            id="sign-up"
+            type="button"
+            class="bg-teal-600 text-white rounded py-2 px-4 hover:bg-teal-700 shadow-lg active:shadow-none flex-1"
+          >
+            Sign up
+          </button>
+        </div>
+        <button
+          type="button"
+          id="sign-google"
+          class="bg-red-600 text-white rounded py-2 px-4 hover:bg-red-700 shadow-lg active:shadow-none"
+        >
+          Google
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

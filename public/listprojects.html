@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script src="./script/firebase.js"></script>
+    <script src="./script/dashboard.js"></script>
+  </head>
+  <body>
+    <main class="container mx-auto my-10">
+      <header
+        class="flex justify-between pb-4 mb-4 border-b-2 border-slate-300 md:px-0 px-4"
+      >
+        <h1>Welcome <span id="user" class="font-bold"></span></h1>
+        <button
+          id="log-out"
+          class="bg-slate-300 hover:bg-slate-200 rounded py-1 px-3 shadow-lg active:shadow-none"
+        >
+          Log out
+        </button>
+      </header>
+      <ol class="list-decimal list-inside max-w-lg mx-auto md:px-0 px-4">
+        <h2 class="font-bold text-center mb-6">Delivered projects</h2>
+        <li>
+          <a
+            href="https://assignment1deboraserra.web.app/ "
+            target="_blank"
+            rel="noreferrer"
+            class="mb-2 hover:underline"
+          >
+            Assignment 1
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://assignment2deboraserra.web.app/ "
+            target="_blank"
+            rel="noreferrer"
+            class="mb-2 hover:underline"
+          >
+            Assignment 2
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://assignment3deboraserra.web.app/ "
+            target="_blank"
+            rel="noreferrer"
+            class="mb-2 hover:underline"
+          >
+            Assignment 3
+          </a>
+          <button
+            id="btn-wire"
+            class="ml-6 bg-slate-300 hover:bg-slate-200 rounded py-1 px-3 shadow active:shadow-none block my-2"
+          >
+            View wireframe
+          </button>
+        </li>
+      </ol>
+    </main>
+  </body>
+</html>

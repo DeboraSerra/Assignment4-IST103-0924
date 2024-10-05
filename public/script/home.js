@@ -1,4 +1,4 @@
-const DASHBOARD = "listprojects.html"
+const DASHBOARD = "listprojects.html";
 
 const signInGoogle = async () => {
   let provider = new firebase.auth.GoogleAuthProvider();
@@ -27,9 +27,8 @@ const signIn = async (e) => {
       .signInWithEmailAndPassword(email, password);
     let user = userCredential.user;
     console.log("Logging successfully", user);
-    alert("Logging successfully");
     location.href = DASHBOARD;
-  } catch (e) {
+  } catch (error) {
     let errorCode = error.code;
     let errorMessage = error.message;
     console.log("Logging fail", errorMessage, errorCode);
@@ -46,7 +45,6 @@ const signUp = async () => {
       .createUserWithEmailAndPassword(email, password);
     let user = userCredential.user;
     console.log("Account created", user);
-    alert("Account created");
     location.href = DASHBOARD;
   } catch (error) {
     let errorCode = error.code;
@@ -56,7 +54,12 @@ const signUp = async () => {
 };
 
 window.onload = () => {
-  document.querySelector('form').addEventListener('submit', signIn)
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      location.href = "listprojects.html";
+    }
+  });
+  document.querySelector("form").addEventListener("submit", signIn);
   document.getElementById("sign-in").addEventListener("click", signIn);
   document
     .getElementById("sign-google")

@@ -22,10 +22,10 @@ const showImg = () => {
   window.open("", "", "popup").document.write(`<img
             src="./assets/wireframe-assignment-3.jpeg"
             alt="Wireframe assignment 3"
-            width="450"
-            height="600"
+            width="900"
+            height="1200"
             id="wire"
-            style="max-width: 100%; height: auto; margin: 0 auto;"
+            style="max-width: 100%; height: auto; margin: 0 auto; display: block;"
           />`);
 };
 

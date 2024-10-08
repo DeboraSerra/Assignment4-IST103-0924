@@ -25,7 +25,7 @@ const showImg = () => {
             width="900"
             height="1200"
             id="wire"
-            style="max-width: 100%; height: auto; margin: 0 auto; display: block;"
+            style="max-width: 100%; height: auto; max-height: 100%; width: auto; margin: 0 auto; display: block;"
           />`);
 };
 
